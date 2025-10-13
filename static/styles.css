@@ -55,22 +55,32 @@ em {
     width: 80vw;
 }
 
-.light-orange_one, .light-orange_three, .light-orange_five {
+.light-orange_one,
+.light-orange_three,
+.light-orange_five {
     animation: pulse 7s infinite;
 }
 
-.light-orange_two, .light-orange_four, .ligth-orange_five {
+.light-orange_two,
+.light-orange_four,
+.ligth-orange_five {
     animation: pulse 10s infinite;
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(0.4);
     }
-    20%, 80%{
+
+    20%,
+    80% {
         transform: scale(0.8);
     }
-    40%, 60% {
+
+    40%,
+    60% {
         transform: scale(1.2);
     }
 }
@@ -119,6 +129,9 @@ header nav a {
 }
 
 @media screen and (max-width: 600px) {
+    header {
+        height: 8vh;
+    }
     header nav p {
         right: 7vw;
     }
@@ -126,6 +139,17 @@ header nav a {
     header nav ul {
         width: 70vw;
     }
+}
+
+@media screen and (max-width: 414px) {
+    header nav p {
+        display: none;
+    }
+
+    header nav ul {
+        width: 90vw;
+    }
+
 }
 
 /* HERO */
@@ -254,23 +278,29 @@ header nav a {
 }
 
 #hero-section .scroll {
-    width: 4rem;
+    width: 5vw;
     animation: bounce 0.75s infinite;
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
-    20%, 80% {
+
+    20%,
+    80% {
         transform: translateY(-7.5px);
     }
-    40%, 60% {
+
+    40%,
+    60% {
         transform: translateY(-15px);
     }
 }
 
-#hero-section a{
+#hero-section a {
     color: black;
 }
 
@@ -289,6 +319,13 @@ header nav a {
     #hero-section .title div {
         width: 90vw;
         font-size: 7vw;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #hero-section .hero-container {
+        margin-top: 2rem;
+        gap: 2rem;
     }
 }
 
@@ -362,7 +399,7 @@ header nav a {
 }
 
 .portrait {
-    width: 35rem;
+    width: 40vw;
     object-fit: contain;
     top: 40rem;
     right: 4vw;
@@ -387,7 +424,7 @@ header nav a {
     height: 30rem;
     width: max(550px, 55vw);
     margin: auto;
-    margin-left: 6rem;
+    margin-left: 7rem;
     gap: 0.5rem;
 }
 
@@ -445,7 +482,7 @@ header nav a {
 
 @media screen and (max-width: 600px) {
     #about-me-section h2 {
-        font-size: max(8vw, 32px);
+        font-size: max(8vw, 26px);
     }
 
     #about-me-section .about-me-desc {
@@ -468,6 +505,35 @@ header nav a {
 
     .yarn {
         right: -22rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #about-me-section {
+        height: 55rem;
+    }
+    #lamp {
+        width: 9rem;
+        top: 6rem;
+        left: -3.5rem;
+    }
+
+    .cassette {
+        width: 10rem;
+        right: -3rem;
+        top: 2rem;
+    }
+
+    .cat {
+        width: 10rem;
+        top: 44rem;
+        left: -4rem;
+    }
+
+    .yarn {
+        width: 17rem;
+        right: -5rem;
+        top: 43rem;
     }
 }
 
@@ -516,7 +582,7 @@ header nav a {
     box-shadow: 1px 1px 6px rgba(179, 174, 166, 0.7);
     object-fit: cover;
     cursor: pointer;
-    
+
 }
 
 #projects-section article img:hover {
@@ -605,27 +671,54 @@ header nav a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+    #projects-section article {
+        gap: 2rem;
+    }
+
+    #projects-section article div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projects-section article img,
+    #projects-section article h3,
+    #projects-section article p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #projects-section {
+        padding: 5rem 0;
+        gap: 3.5rem;
+    }
+    #projects-section article {
+        gap: 1.5rem;
+    }
+
+    #projects-section article img {
+        height: 20vh;
+        ;
+    }
+
+    #projects-section h2 {
+        font-size: 1.6rem;
+    }
+
+    #projects-section article h3 {
+        font-size: 1.4rem;
+    }
+}
+
 /* CONTACT */
 
 /* CONTACT: LIGHTS */
-.orange_five {
-    background-image: radial-gradient(closest-side, rgba(242, 186, 33, 0.6), transparent);
-    top: 20rem;
-    right: -8rem;
-    z-index: 40;
-}
-
-.purple_five {
-    background-image: radial-gradient(closest-side, rgba(138, 35, 81, 0.7), transparent);
-    top: 25rem;
-    right: -10rem;
-    z-index: 55;
-}
 
 .light-orange_five {
     background-image: radial-gradient(closest-side, rgba(138, 35, 135, 0.4), transparent);
-    top: 0rem;
-    right: -45rem;
+    top: 30rem;
+    right: -20rem;
     z-index: 50;
 }
 
@@ -693,4 +786,23 @@ header nav a {
 #contact-section a:hover {
     border: 2px solid white;
     padding: 0.5rem;
-} */
+}
+
+@media screen and (max-width: 600px) {
+    .light-orange_five{
+        top: 15rem;
+        right: -12rem;
+    }
+    #contact-section {
+        height: auto;
+        padding: 3rem 0;
+        gap: 2rem;
+    }
+    #contact-section h2{
+        font-size: max(7vw, 24px);
+    }
+
+    #contact-section li, #contact-section p {
+        font-size: max(4vw, 12px);
+    }
+}
