@@ -8,6 +8,8 @@ html {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     color: black;
+    scroll-behavior: smooth !important;
+    height: auto;
 }
 
 body {
@@ -692,4 +694,4 @@ header nav a {
 #contact-section a:hover {
     border: 2px solid white;
     padding: 0.5rem;
-}
+} */
