@@ -63,7 +63,7 @@ em {
 
 .light-orange_two,
 .light-orange_four,
-.ligth-orange_five {
+.light-orange_five {
     animation: pulse 10s infinite;
 }
 
@@ -102,7 +102,7 @@ header nav {
 header nav ul {
     width: max(40vw, 400px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     border-radius: 1.5rem;
     padding: 0.75rem 2rem;
@@ -138,6 +138,7 @@ header nav a {
 
     header nav ul {
         width: 70vw;
+        justify-content: space-between;
     }
 }
 
@@ -274,11 +275,11 @@ header nav a {
 
 #hero-section .title div p {
     text-align: center;
-    font-size: 1.25vw;
+    font-size: max(1.25vw, 10px);
 }
 
 #hero-section .scroll {
-    width: 5vw;
+    width: 4vw;
     animation: bounce 0.75s infinite;
 }
 
@@ -314,11 +315,18 @@ header nav a {
 }
 
 @media screen and (max-width: 800px) {
+    #hero-section .title {
+        gap: 1.5rem;
+    }
 
     #hero-section .title>p,
-    #hero-section .title div {
+    #hero-section .title>div {
         width: 90vw;
         font-size: 7vw;
+    }
+
+    #hero-section #skills {
+        font-size: 5vw;
     }
 }
 
@@ -379,7 +387,7 @@ header nav a {
 .cat {
     width: 20rem;
     transform: scaleX(-1);
-    top: 65rem;
+    top: 68rem;
     left: -2rem;
 }
 
@@ -393,13 +401,13 @@ header nav a {
 .yarn {
     width: 35rem;
     transform: scaleX(-1) rotate(-20deg);
-    top: 60rem;
+    top: 65rem;
     right: -7rem;
     z-index: 10;
 }
 
 .portrait {
-    width: 40vw;
+    width: 40rem;
     object-fit: contain;
     top: 40rem;
     right: 4vw;
@@ -420,8 +428,9 @@ header nav a {
 #about-me-section .about-me-desc {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 30rem;
+    justify-content: center;
+    /* height: 40rem;
+    max-height: 50rem; */
     width: max(550px, 55vw);
     margin: auto;
     margin-left: 7rem;
@@ -435,15 +444,15 @@ header nav a {
 }
 
 #about-me-section .bio {
-    height: 14rem;
-    font-size: max(0.5vw, 1rem);
+    /* height: 14rem; */
+    font-size: max(1.1vw,18px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 #about-me-section .info {
-    /* font-size: 1.1vw; */
+    font-size: max(1.1vw, 14px);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -456,6 +465,9 @@ header nav a {
 /* ABOUT ME: RESPONSIVE */
 
 @media screen and (max-width: 1000px) {
+    #about-me-section .about-me-desc {
+        width: 80vw;
+    }
     #about-me-section .portrait {
         display: none;
     }
@@ -463,19 +475,20 @@ header nav a {
     .yarn {
         right: -18rem;
     }
+
+    .cassette {
+        top: 13rem;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    #about-me-section .about-me-desc {
-        width: 80vw;
-    }
 
     #about-me-section .bio {
         height: auto;
     }
 
     .cassette {
-        top: 13rem;
+        top: 12rem;
         right: -11rem;
     }
 }
@@ -495,7 +508,7 @@ header nav a {
     }
 
     #lamp {
-        top: 18rem;
+        top: 16rem;
         transform: rotate(15deg);
     }
 
@@ -509,19 +522,30 @@ header nav a {
 }
 
 @media screen and (max-width: 414px) {
+    #about-me-section .bio {
+        font-size: 14px;
+    }
+    .orange_three {
+        top: 9rem;
+    }
+
+    .light-orange_four {
+        top: 53rem;
+    }
+
     #about-me-section {
         height: 55rem;
     }
     #lamp {
         width: 9rem;
-        top: 6rem;
+        top: 5rem;
         left: -3.5rem;
     }
 
     .cassette {
         width: 10rem;
         right: -3rem;
-        top: 2rem;
+        top: 4rem;
     }
 
     .cat {
@@ -532,7 +556,7 @@ header nav a {
 
     .yarn {
         width: 17rem;
-        right: -5rem;
+        right: -7rem;
         top: 43rem;
     }
 }
@@ -563,7 +587,7 @@ header nav a {
     flex-direction: column;
     align-items: flex-start;
     width: 65vw;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 #projects-section article>div {
@@ -577,12 +601,12 @@ header nav a {
     background-color: rgb(191, 185, 195);
     align-self: center;
     border-radius: 1rem;
-    height: 20rem;
+    /* height: 20rem; */
     width: 50%;
     box-shadow: 1px 1px 6px rgba(179, 174, 166, 0.7);
     object-fit: cover;
     cursor: pointer;
-
+    aspect-ratio: 1 / 0.75;
 }
 
 #projects-section article img:hover {
@@ -596,7 +620,7 @@ header nav a {
 
 #projects-section article p {
     width: 60%;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
 }
 
 #projects-section article hr {
@@ -671,9 +695,20 @@ header nav a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1000px){
+    #projects-section article p {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 800px) {
+    #projects-section h2 {
+        width: 90vw;
+    }
+
     #projects-section article {
         gap: 2rem;
+        width: 85vw;
     }
 
     #projects-section article div {
@@ -686,6 +721,10 @@ header nav a {
     #projects-section article p {
         width: 100%;
     }
+
+        #projects-section article p {
+        font-size: 1.35rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -697,18 +736,18 @@ header nav a {
         gap: 1.5rem;
     }
 
-    #projects-section article img {
-        height: 20vh;
-        ;
-    }
-
     #projects-section h2 {
         font-size: 1.6rem;
     }
 
     #projects-section article h3 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
+
+    #projects-section article p {
+        font-size: 14px;
+    }
+
 }
 
 /* CONTACT */
@@ -717,7 +756,7 @@ header nav a {
 
 .light-orange_five {
     background-image: radial-gradient(closest-side, rgba(138, 35, 135, 0.4), transparent);
-    top: 30rem;
+    bottom: -25rem;
     right: -20rem;
     z-index: 50;
 }
@@ -729,8 +768,9 @@ header nav a {
     overflow-x: clip;
     overflow-y: clip;
     position: relative;
+    padding: 8rem 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 80vh; */
     background-color: black;
     color: white;
     display: flex;
@@ -788,21 +828,28 @@ header nav a {
     padding: 0.5rem;
 }
 
+@media screen and (max-width: 800px) {
+    #contact-section {
+        gap: 2rem;
+    }
+
+}
+
 @media screen and (max-width: 600px) {
     .light-orange_five{
         top: 15rem;
         right: -12rem;
     }
+
     #contact-section {
-        height: auto;
-        padding: 3rem 0;
-        gap: 2rem;
+        padding: 4rem 0;
     }
+
     #contact-section h2{
         font-size: max(7vw, 24px);
     }
 
     #contact-section li, #contact-section p {
-        font-size: max(4vw, 12px);
+        font-size: max(4vw, 14px);
     }
 }
