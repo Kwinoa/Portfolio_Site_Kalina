@@ -406,11 +406,26 @@ header nav a {
     z-index: 10;
 }
 
+.background {
+    position: absolute;
+    top: 32rem;
+    right: 1vw;
+    width: 44rem;
+    height: 40rem;
+    background-image: url('./images/portrait_background.jpg');
+    /* background-size:cover; */
+    background-size: contain;
+    background-size: 76%;
+    background-repeat: no-repeat;
+    background-clip:unset;
+    background-position: top;
+    z-index: -60;
+    /* background-position-y: -300px; */
+}
+
 .portrait {
-    width: 40rem;
-    object-fit: contain;
-    top: 40rem;
-    right: 4vw;
+    width: 44rem;
+    top: 9.5rem;
 }
 
 /* ABOUT ME: TEXT */
@@ -464,6 +479,16 @@ header nav a {
 
 /* ABOUT ME: RESPONSIVE */
 
+@media screen and (max-width: 1200px) {
+    #about-me-section .background {
+        background-image: none;
+    }
+
+    .background .portrait {
+        right: -12vw;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     #about-me-section .about-me-desc {
         width: 80vw;
@@ -477,19 +502,8 @@ header nav a {
     }
 
     .cassette {
-        top: 13rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
-
-    #about-me-section .bio {
-        height: auto;
-    }
-
-    .cassette {
-        top: 12rem;
-        right: -11rem;
+        top: 7rem;
+        right: -5rem;
     }
 }
 
