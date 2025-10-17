@@ -15,15 +15,18 @@
 <header>
     <nav>
         <ul>
-            <li><a href="#about-me-section">About Me</a></li>
+            <li><a href="#lamp">About Me</a></li>
             <li><a href="#projects-section">Projects</a></li>
             <li><a href="#contact-section">Contact</a></li>
+            <li><a href="./static/images/Kalina_Resume.pdf" target="_blank">Resume</a></li>
         </ul>
-        <p><a href="./static/images/Kalina_Resume.pdf" target="_blank">Resume</a></p>
     </nav>
 </header>
 
+
 <main>
+    <div class="overlay"></div>
+    <div class="black"></div>
     <section id="hero-section">
         <div class="purple_one circle"></div>
         <div class="orange_one circle"></div>
@@ -34,18 +37,22 @@
 
         <div class="hero-container">
             <div class="title">
-                <p>HI I'M KALINA,</p>
-                <div>
-                    <h1>A</h1>
+                <div class="one">
+                    <p>HI I'M KALINA,</p>
+                </div>
+                <div class="middle">
+                    <h1 class="two">A</h1>
                     <p>Providing people <em>access to technological elevation,</em><br>
                         Giving <em>life to human ideas</em> with a breath of <em>motion and interactivity</em><br>
                         All executed with <em>detail, precision, and clarity.</em>
                     </p>
                 </div>
-                <p>WEB DEVELOPER</p>
+                <div class="three">
+                    <p>WEB DEVELOPER</p>
+                </div>
             </div>
 
-            <a href="#about-me-section">
+            <a href="#lamp">
                 <svg class="scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                     class="size-6">
                     <path fill-rule="evenodd"
@@ -99,8 +106,6 @@
                 <hr noshade>
             </div>
         </div>
-        <!-- <img class="portrait" src="./static/images/portrait.png" alt="girl wearing headphones"> -->
-        <!-- <img class="portrait" src="./static/images/portrait_background.jpg" alt="background image"> -->
         <div class="background">
             <img class="portrait" src="./static/images/portrait.png" alt="girl wearing headphones">
         </div>
@@ -108,7 +113,42 @@
 
     <section id="projects-section">
         <h2>/PROJECTS</h2>
-        <article>
+        <article id="recipe">
+            <hr noshade>
+            <div>
+                <img src="./static/images/Recipe_index.png" alt="recipe website screenshot">
+                <img src="./static/images/Recipe_recipe.png" alt="recipe website screenshot">
+            </div>
+            <h3>/RECIPE</h3>
+            <p>/index, /recipe, /profile, /search, /login</p>
+            <p>In the process of creating a recipe management website that is able to handle user logins and recipe
+                additions to the site; alongside search and filter capabilities.
+                MVC architecture with HTML5, CSS3, Django, and SQLite is used to showcase efficiency in responsive
+                design
+                and database modeling and querying.
+            </p>
+        </article>
+        <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01" alt="">
+            <div id="caption"></div>
+        </div>
+        <article id="snake">
+            <hr noshade>
+            <div>
+                <img src="./static/images/Snake_about.png" alt="snake game screenshot">
+                <img src="./static/images/Snake_client.png" alt="snake game screenshot">
+            </div>
+            <h3>/SNAKE_GAME</h3>
+            <p>/about, /snake</p>
+            <p>Built a snake game that applies learned concepts on MVC architecture, client-server communication, and
+                database modeling + connection in C#.
+                Playable through a fun and visually appearing game interface, it allows multiple players to connect
+                locally and compete to get the longest snake
+                (highest score).
+            </p>
+        </article>
+        <article id="somcsma">
             <div>
                 <img src="./static/images/SOMCSMA_index.png" alt="SOMCSMA website screenshot">
                 <img src="./static/images/SOMCSMA_events.png" alt="SOMCSMA website screenshot">
@@ -124,42 +164,7 @@
                 has given me many opportunities to learn, and lots of creative freedom.
             </p>
         </article>
-        <div id="myModal" class="modal">
-            <span class="close">×</span>
-            <img class="modal-content" id="img01" alt="">
-            <div id="caption"></div>
-        </div>
-        <article>
-            <hr noshade>
-            <div>
-                <img src="./static/images/Recipe_index.png" alt="recipe website screenshot">
-                <img src="./static/images/Recipe_recipe.png" alt="recipe website screenshot">
-            </div>
-            <h3>/RECIPE</h3>
-            <p>/index, /recipe, /profile, /search, /login</p>
-            <p>In the process of creating a recipe management website that is able to handle user logins and recipe
-                additions to the site; alongside search and filter capabilities.
-                MVC architecture with HTML5, CSS3, Django, and SQLite is used to showcase efficiency in responsive
-                design
-                and database modeling and querying.
-            </p>
-        </article>
-        <article>
-            <hr noshade>
-            <div>
-                <img src="./static/images/Snake_about.png" alt="snake game screenshot">
-                <img src="./static/images/Snake_client.png" alt="snake game screenshot">
-            </div>
-            <h3>/SNAKE_GAME</h3>
-            <p>/about, /snake</p>
-            <p>Built a snake game that applies learned concepts on MVC architecture, client-server communication, and
-                database modeling + connection in C#.
-                Playable through a fun and visually appearing game interface, it allows multiple players to connect
-                locally and compete to get the longest snake
-                (highest score).
-            </p>
-        </article>
-        <article>
+        <article id="spread">
             <hr noshade>
             <div>
                 <img src="./static/images/Spreadsheet_about.png" alt="spreadsheet website screenshot">
@@ -199,6 +204,18 @@
 </footer>
 
 <script>
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const overlay = document.querySelector(".overlay");
+    //     const blackOverlay = document.querySelector(".overlay");
+
+    //     overlay.addEventListener("animationend", () => {
+    //         overlay.style.zIndex = "-200";
+    //     });
+    //     blackOverlay.addEventListener("animationend", () => {
+    //         blackOverlay.style.zIndex = "-200";
+    //     });
+    // });
+
     var movingBar = document.getElementById('skills');
     window.addEventListener('scroll', function () {
         let value = window.scrollY;

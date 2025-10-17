@@ -12,12 +12,92 @@ html {
 }
 
 body {
-    background-color: rgb(228, 228, 219);
+    background-color: #e5e4db;
+    overflow-x: clip;
 }
 
 em {
     font-style: normal;
     font-weight: 600;
+}
+
+.black {
+    position: absolute;
+    width: 100vw;
+    height: 620vh;
+    top: 0;
+    left: 0;
+    z-index: 199;
+    background-color: black;
+    animation: fade-black 2.75s forwards, lowerZ 0s 3s forwards;
+}
+
+
+.overlay {
+    background-color: #e5e4db;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 200;
+    margin-top: 33vh;
+    margin-left: 48vw;
+    width: 5vw;
+    height: 5vw;
+    animation: grow-and-fade 3s forwards, lowerZ 0s 3s forwards;
+}
+
+@keyframes lowerZ {
+    to {
+        z-index: -200;
+    }
+}
+
+@keyframes fade-black {
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.97;
+    }
+
+    99% {
+        opacity: 0.01
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes grow-and-fade {
+    0% {
+        transform: scale(0.001);
+        opacity: 1;
+    }
+
+    /* 30% {
+        transform: scale(2);
+        background-color: #e5e4db;
+    } */
+
+    40% {
+        transform: scale(2);
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    99% {
+        transform: scale(35);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 .circle {
@@ -99,6 +179,13 @@ header nav {
     align-items: center;
 }
 
+@keyframes increaseZ {
+    to {
+        z-index: 300;
+    }
+}
+
+
 header nav ul {
     width: max(40vw, 400px);
     display: flex;
@@ -123,7 +210,7 @@ header nav a {
 
 @media screen and (max-width: 800px) {
     header {
-        justify-content: flex-start;
+        /* justify-content: flex-start; */
         margin: 0 5vw;
     }
 }
@@ -132,6 +219,7 @@ header nav a {
     header {
         height: 8vh;
     }
+
     header nav p {
         right: 7vw;
     }
@@ -229,7 +317,7 @@ header nav a {
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
-    text-overflow: hidden;
+    /* text-overflow: clip; */
 }
 
 #hero-section .hero-container {
@@ -245,59 +333,111 @@ header nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
-#hero-section .title>p {
+.one,
+.three {
+    overflow: hidden;
+    display: inline-block;
+}
+
+#hero-section .title .one p,
+#hero-section .title .three p {
     font-family: "Krona One", sans-serif;
     width: 75vw;
     text-align: justify;
     text-align-last: justify;
-    text-overflow: clip;
-    overflow: hidden;
     font-size: 6vw;
 }
 
-#hero-section .title div {
+@keyframes slide-up {
+    0% {
+        transform: translateY(200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+#hero-section .title .one p {
+    transform: translateY(200%);
+    animation: slide-up 1s ease-out forwards;
+    animation-delay: 2.25s;
+}
+
+#hero-section .title .three p {
+    transform: translateY(200%);
+    animation: slide-up 1s ease-out forwards;
+    animation-delay: 2.75s;
+}
+
+#hero-section .title .middle {
     width: 75vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    text-overflow: clip;
     overflow: hidden;
 }
 
-#hero-section .title h1 {
+#hero-section .title .middle h1 {
     font-family: "Krona One", sans-serif;
     font-weight: normal;
     font-size: 6vw;
+    transform: translateY(200%);
+    animation: slide-up 1s ease-out forwards;
+    animation-delay: 2.5s;
 }
 
-#hero-section .title div p {
+#hero-section .title .middle p {
+    opacity: 0;
     text-align: center;
     font-size: max(1.25vw, 10px);
+    animation: fading-in 1s forwards;
+    animation-delay: 4s;
+}
+
+@keyframes fading-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #hero-section .scroll {
+    opacity: 0;
     width: 4vw;
     animation: bounce 0.75s infinite;
+    animation-delay: 6s;
 }
 
 @keyframes bounce {
 
-    0%,
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 
     20%,
     80% {
         transform: translateY(-7.5px);
+        opacity: 1;
     }
 
     40%,
     60% {
         transform: translateY(-15px);
+        opacity: 1;
     }
 }
 
@@ -319,8 +459,9 @@ header nav a {
         gap: 1.5rem;
     }
 
-    #hero-section .title>p,
-    #hero-section .title>div {
+    #hero-section .title .one p,
+    #hero-section .title .three p,
+    #hero-section .title .middle {
         width: 90vw;
         font-size: 7vw;
     }
@@ -403,7 +544,7 @@ header nav a {
     transform: scaleX(-1) rotate(-20deg);
     top: 65rem;
     right: -7rem;
-    z-index: 10;
+    z-index: -15;
 }
 
 .background {
@@ -413,14 +554,12 @@ header nav a {
     width: 44rem;
     height: 40rem;
     background-image: url('./images/portrait_background.jpg');
-    /* background-size:cover; */
     background-size: contain;
     background-size: 76%;
     background-repeat: no-repeat;
-    background-clip:unset;
+    background-clip: unset;
     background-position: top;
     z-index: -60;
-    /* background-position-y: -300px; */
 }
 
 .portrait {
@@ -444,8 +583,6 @@ header nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 40rem;
-    max-height: 50rem; */
     width: max(550px, 55vw);
     margin: auto;
     margin-left: 7rem;
@@ -459,8 +596,7 @@ header nav a {
 }
 
 #about-me-section .bio {
-    /* height: 14rem; */
-    font-size: max(1.1vw,18px);
+    font-size: max(1.1vw, 18px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -493,6 +629,7 @@ header nav a {
     #about-me-section .about-me-desc {
         width: 80vw;
     }
+
     #about-me-section .portrait {
         display: none;
     }
@@ -539,6 +676,7 @@ header nav a {
     #about-me-section .bio {
         font-size: 14px;
     }
+
     .orange_three {
         top: 9rem;
     }
@@ -550,6 +688,7 @@ header nav a {
     #about-me-section {
         height: 55rem;
     }
+
     #lamp {
         width: 9rem;
         top: 5rem;
@@ -615,10 +754,10 @@ header nav a {
     background-color: rgb(191, 185, 195);
     align-self: center;
     border-radius: 1rem;
-    /* height: 20rem; */
     width: 50%;
     box-shadow: 1px 1px 6px rgba(179, 174, 166, 0.7);
     object-fit: cover;
+    object-position: center top;
     cursor: pointer;
     aspect-ratio: 1 / 0.75;
 }
@@ -647,7 +786,7 @@ header nav a {
 .modal {
     display: none;
     position: fixed;
-    z-index: 150;
+    z-index: 50;
     padding-top: 50px;
     left: 0;
     top: 0;
@@ -709,7 +848,7 @@ header nav a {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
     #projects-section article p {
         width: 100%;
     }
@@ -730,13 +869,18 @@ header nav a {
         flex-direction: column;
     }
 
+    #projects-section article img {
+        aspect-ratio:  1 / 0.5;
+        /* width: 75%; */
+    }
+
     #projects-section article img,
     #projects-section article h3,
     #projects-section article p {
         width: 100%;
     }
 
-        #projects-section article p {
+    #projects-section article p {
         font-size: 1.35rem;
     }
 }
@@ -746,6 +890,7 @@ header nav a {
         padding: 5rem 0;
         gap: 3.5rem;
     }
+
     #projects-section article {
         gap: 1.5rem;
     }
@@ -784,7 +929,6 @@ header nav a {
     position: relative;
     padding: 8rem 0;
     width: 100vw;
-    /* height: 80vh; */
     background-color: black;
     color: white;
     display: flex;
@@ -797,7 +941,6 @@ header nav a {
 #contact-section h2 {
     font-size: 3.5rem;
     width: 65vw;
-    z-index: 100;
 }
 
 .contact_one {
@@ -829,7 +972,6 @@ header nav a {
     width: 50vw;
     font-size: 1.5rem;
     text-align: center;
-    z-index: 100;
 }
 
 #contact-section a {
@@ -850,7 +992,7 @@ header nav a {
 }
 
 @media screen and (max-width: 600px) {
-    .light-orange_five{
+    .light-orange_five {
         top: 15rem;
         right: -12rem;
     }
@@ -859,11 +1001,12 @@ header nav a {
         padding: 4rem 0;
     }
 
-    #contact-section h2{
+    #contact-section h2 {
         font-size: max(7vw, 24px);
     }
 
-    #contact-section li, #contact-section p {
+    #contact-section li,
+    #contact-section p {
         font-size: max(4vw, 14px);
     }
 }
