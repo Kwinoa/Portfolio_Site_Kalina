@@ -24,7 +24,7 @@ em {
 .black {
     position: absolute;
     width: 100vw;
-    height: 620vh;
+    height: 600vh;
     top: 0;
     left: 0;
     z-index: 199;
@@ -48,6 +48,7 @@ em {
 @keyframes lowerZ {
     to {
         z-index: -200;
+        height: 0vh;
     }
 }
 
@@ -74,11 +75,6 @@ em {
         transform: scale(0.001);
         opacity: 1;
     }
-
-    /* 30% {
-        transform: scale(2);
-        background-color: #e5e4db;
-    } */
 
     40% {
         transform: scale(2);
@@ -170,7 +166,7 @@ em {
 header {
     display: flex;
     justify-content: center;
-    height: 15vh;
+    height: 7rem;
 }
 
 header nav {
@@ -209,23 +205,18 @@ header nav a {
 }
 
 @media screen and (max-width: 800px) {
-    header {
-        /* justify-content: flex-start; */
-        margin: 0 5vw;
+    header nav ul {
+        width: 80vw;
     }
 }
 
 @media screen and (max-width: 600px) {
     header {
-        height: 8vh;
+        height: 5rem;
     }
-
-    header nav p {
-        right: 7vw;
-    }
-
+    
     header nav ul {
-        width: 70vw;
+        width: 90vw;
         justify-content: space-between;
     }
 }
@@ -236,7 +227,8 @@ header nav a {
     }
 
     header nav ul {
-        width: 90vw;
+        width: 95vw;
+        padding: 1rem 1rem;
     }
 
 }
@@ -521,7 +513,7 @@ header nav a {
 #lamp {
     width: 22rem;
     transform: rotate(5deg);
-    top: 21.5rem;
+    top: 19.5rem;
     left: -10rem;
 }
 
@@ -598,6 +590,7 @@ header nav a {
 #about-me-section .bio {
     font-size: max(1.1vw, 18px);
     display: flex;
+    gap: 2vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -642,6 +635,10 @@ header nav a {
         top: 7rem;
         right: -5rem;
     }
+
+    #lamp {
+        top: 17rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -658,16 +655,22 @@ header nav a {
         gap: 0.5rem;
     }
 
+    .cassette {
+        top: 4rem;
+    }
+
     #lamp {
-        top: 16rem;
+        top: 13.5rem;
         transform: rotate(15deg);
     }
 
     .cat {
+        top: 70rem;
         left: -8rem;
     }
 
     .yarn {
+        top: 66rem;
         right: -22rem;
     }
 }
@@ -691,26 +694,26 @@ header nav a {
 
     #lamp {
         width: 9rem;
-        top: 5rem;
+        top: 2rem;
         left: -3.5rem;
     }
 
     .cassette {
         width: 10rem;
         right: -3rem;
-        top: 4rem;
+        top: 2rem;
     }
 
     .cat {
         width: 10rem;
-        top: 44rem;
+        top: 47rem;
         left: -4rem;
     }
 
     .yarn {
         width: 17rem;
         right: -7rem;
-        top: 43rem;
+        top: 45rem;
     }
 }
 
@@ -870,7 +873,7 @@ header nav a {
     }
 
     #projects-section article img {
-        aspect-ratio:  1 / 0.5;
+        aspect-ratio: 1 / 0.5;
         /* width: 75%; */
     }
 
@@ -917,7 +920,7 @@ header nav a {
     background-image: radial-gradient(closest-side, rgba(138, 35, 135, 0.4), transparent);
     bottom: -25rem;
     right: -20rem;
-    z-index: 50;
+    z-index: -100;
 }
 
 /* CONTACT: TEXT */
@@ -965,6 +968,7 @@ header nav a {
     list-style-type: none;
     word-wrap: break-word;
     white-space: normal;
+    z-index: 100;
 }
 
 #contact-section p,

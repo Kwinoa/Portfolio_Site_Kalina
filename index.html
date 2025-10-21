@@ -88,15 +88,16 @@
             <div class="bio">
                 <p>My name is <em>Kalina Tran</em>. I'm Vietnamese-American, born and raised in <em>Salt Lake City,
                         Utah.</em></p>
-                <p>Growing up, I found <em>satisfaction in solving problems, and solace in attention to detail.</em> In
+                <p>Growing up, I found satisfaction in <em>solving problems</em>, and solace in <em></em>attention to detail.</em> In
                     high school I
-                    <em>interned in accounting</em> for my interest in numbers and rules, and throughout, I <em>taught
-                        myself the fundamentals of
-                        HTML and CSS,</em> working on simple websites in my free time.
+                    <em>interned in accounting</em> for my interest in numbers and rules, working with a small team
+                    under time constraints.
+                    Throughout, I <em>started a car detailing
+                        business</em> which helped me develop skills for organization, precision, and time-management.
                 </p>
-                <p>I believe these skills <em>align and translate into my goals</em> in computer science, sparking my
-                    journey into
-                    tech and my initiative to grow in this field.</p>
+                <p>These skills laid the foundation for my journey in computer science and continue to drive my
+                    <em>passion for learning and building in tech.</em>
+                </p>
             </div>
             <div class="info">
                 <hr noshade>
@@ -119,14 +120,25 @@
                 <img src="./static/images/Recipe_index.png" alt="recipe website screenshot">
                 <img src="./static/images/Recipe_recipe.png" alt="recipe website screenshot">
             </div>
-            <h3>/RECIPE</h3>
+            <h3>/RECIPE_MANAGER</h3>
             <p>/index, /recipe, /profile, /search, /login</p>
-            <p>In the process of creating a recipe management website that is able to handle user logins and recipe
-                additions to the site; alongside search and filter capabilities.
-                MVC architecture with HTML5, CSS3, Django, and SQLite is used to showcase efficiency in responsive
-                design
-                and database modeling and querying.
-            </p>
+            <div>
+                <p>In the process of creating a recipe management website that is able to handle user logins and recipe
+                    additions to the site; alongside search and filter capabilities.
+                    MVC architecture with HTML5, CSS3, Django, and SQLite is used to showcase efficiency in responsive
+                    design
+                    and database modeling and querying.
+                </p>
+                <!-- <h3>Process</h3> -->
+                <!-- <p>The overall goal of this project is to learn the skills to eventually make a full-stack website.The application is written using Django for the backend, which allowed for easy set up of
+                    controllers and urls.
+                    For the model we used a class-based structure for recipe models in addition to related models
+                    representing the recipe's steps, ingredients, tags, and user profile. Once this was setup, the
+                    queries were passed from the controller to the views to be dynamically rendered. Right now, the forms are being setup
+                    to retrieve data and output any errors.
+                </p> -->
+            </div>
+
         </article>
         <div id="myModal" class="modal">
             <span class="close">×</span>
@@ -204,18 +216,6 @@
 </footer>
 
 <script>
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const overlay = document.querySelector(".overlay");
-    //     const blackOverlay = document.querySelector(".overlay");
-
-    //     overlay.addEventListener("animationend", () => {
-    //         overlay.style.zIndex = "-200";
-    //     });
-    //     blackOverlay.addEventListener("animationend", () => {
-    //         blackOverlay.style.zIndex = "-200";
-    //     });
-    // });
-
     var movingBar = document.getElementById('skills');
     window.addEventListener('scroll', function () {
         let value = window.scrollY;
