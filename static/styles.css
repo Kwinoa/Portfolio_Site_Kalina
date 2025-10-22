@@ -644,6 +644,10 @@ header nav a {
     #lamp {
         top: 17rem;
     }
+
+    .light-orange_four {
+        top: 600px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -677,6 +681,10 @@ header nav a {
     .yarn {
         top: 66rem;
         right: -22rem;
+    }
+
+    .light-orange_four {
+        top: 700px;
     }
 }
 
