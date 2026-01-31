@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game Client - Kalina Tran's Portfolio</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="icon" type="image/png" href="./static/images/web-miscellaneous-svgrepo-com.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#implementation">Implementation</a></li>
+                <li><a href="#impact">Results</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <h1>/SNAKE_GAME_CLIENT</h1>
+            <div class="tech-tags">
+                <div>
+                    <svg fill="#f27121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="5151e0c8492e5103c096af88a51e54a6"> <path display="inline" d="M233.274,286.089l89.802,27.145c-6.035,25.188-15.535,46.223-28.5,63.107 c-12.975,16.894-29.071,29.638-48.297,38.233c-19.229,8.596-43.697,12.894-73.412,12.894c-36.038,0-65.482-5.238-88.33-15.711 c-22.852-10.477-42.563-28.896-59.155-55.271C8.794,330.114,0.5,296.354,0.5,255.208c0-54.855,14.594-97.016,43.769-126.479 c29.18-29.461,70.464-44.197,123.855-44.197c41.776,0,74.614,8.451,98.51,25.336c23.91,16.892,41.659,42.834,53.273,77.816 l-90.481,20.131c-3.164-10.098-6.485-17.492-9.95-22.168c-5.733-7.839-12.745-13.871-21.043-18.095 c-8.294-4.22-17.564-6.337-27.82-6.337c-23.23,0-41.024,9.343-53.391,28.021c-9.342,13.861-14.018,35.626-14.018,65.294 c0,36.756,5.576,61.948,16.732,75.584c11.16,13.627,26.848,20.439,47.059,20.439c19.599,0,34.413-5.503,44.449-16.516 C221.474,323.04,228.751,307.046,233.274,286.089z M485.345,239.259l-6.854,34.292H511.5v37.262h-40.452l-9.5,47.522h-38.41 l9.527-47.522h-29.769l-9.595,47.522h-38.14l9.527-47.522h-18.572v-37.262h26.047l6.876-34.292h-32.923v-37.262h40.398 l9.688-48.332h38.409l-9.752,48.332h29.625l9.694-48.332h38.273l-9.657,48.332H511.5v37.262H485.345z M447.017,239.259h-29.68 l-6.921,34.292h29.724L447.017,239.259z"> </path> </g> </g></svg>
+                    <p class="tag">C#</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="5151e0c8492e5103c096af88a51e96d3"> <path display="inline" d="M15.079,322.648c-4.059,0-7.502,1.442-10.338,4.379c-2.836,2.915-4.241,6.441-4.241,10.608 c0,4.059,1.405,7.572,4.241,10.533s6.279,4.449,10.338,4.449c4.163,0,7.706-1.488,10.621-4.449 c2.924-2.961,4.375-6.475,4.375-10.533c0-4.067-1.451-7.594-4.375-10.551C22.785,324.112,19.242,322.648,15.079,322.648z M193.558,293.331c0,13.166,0.458,22.501,1.339,27.962h-0.52c-1.322-2.55-3.913-6.795-7.71-12.717L91.454,159.382H62.523v190.185 h22.29V212.157c0-13.341-0.35-22.057-1.053-26.115h0.803c1.676,4.333,3.655,8.3,5.955,11.938l98.145,151.586h27.047V159.382 h-22.152V293.331z M280.096,262.957h68.694v-20.156h-68.694v-63.263h74.146v-20.156h-96.419v190.185h100.789V329.41h-78.517 V262.957z M379.546,179.538h54.884v170.028h22.286V179.538H511.5v-20.156H379.546V179.538z"> </path> </g> </g></svg>
+                    <p class="tag">.NET</p>
+                </div>
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14 19H16C17.1046 19 18 18.1046 18 17V14.5616C18 13.6438 18.6246 12.8439 19.5149 12.6213L21.0299 12.2425C21.2823 12.1794 21.2823 11.8206 21.0299 11.7575L19.5149 11.3787C18.6246 11.1561 18 10.3562 18 9.43845V5H14" stroke="#f27121" stroke-width="2"></path> <path d="M10 5H8C6.89543 5 6 5.89543 6 7V9.43845C6 10.3562 5.37541 11.1561 4.48507 11.3787L2.97014 11.7575C2.71765 11.8206 2.71765 12.1794 2.97014 12.2425L4.48507 12.6213C5.37541 12.8439 6 13.6438 6 14.5616V19H10" stroke="#f27121" stroke-width="2"></path> </g></svg>                    <p class="tag">JSON</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" stroke="#f27121"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="5151e0c8492e5103c096af88a51e75c7"> <path display="inline" fill-rule="evenodd" clip-rule="evenodd" d="M1.008,0.5C0.438,0.583,0.48,1.27,0.521,1.958 c0,169.668,0,339.31,0,508.974c169.364,1.135,340.808,0.162,510.979,0.486c0-170.309,0-340.61,0-510.918 C341.342,0.5,171.167,0.5,1.008,0.5z M259.893,452.167c-11.822,11.919-30.478,18.938-53.429,18.938 c-37.643,0-58.543-18.34-71.884-43.711c12.842-8.2,25.966-16.122,39.344-23.795c5.456,15.262,23.886,32.42,44.683,21.857 c13.183-6.699,11.661-27.01,11.661-49.054c0-45.773,0-98.578,0-139.872c-0.042-0.688-0.083-1.375,0.482-1.458 c15.707,0,31.413,0,47.116,0c0,36.788,0,78.402,0,117.529C277.866,395.199,280.91,430.988,259.893,452.167z M470.696,409.917 c-2.674,39.884-35.243,61.063-79.17,61.188c-43.062,0.124-70.624-19.013-87.433-48.567c12.085-8.317,25.778-15.017,38.375-22.822 c10.08,15.761,27.537,30.91,53.429,28.652c16.131-1.406,34.856-14.555,24.285-34.482c-5.127-9.66-17.516-14.567-28.656-19.425 c-35.352-15.424-76.828-29.571-72.861-84.992c1.327-18.514,9.852-31.525,20.889-40.796c11.311-9.5,26.46-15.867,46.629-16.511 c36.629-1.173,56.723,15.12,70.429,37.884c-11.664,8.891-24.514,16.608-37.401,24.281c-4.229-12.995-24.644-25.658-41.772-17.969 c-7.789,3.493-14.788,13.761-10.684,26.224c3.66,11.115,18.589,17.199,30.599,22.344 C433.706,340.486,474.331,355.693,470.696,409.917z"> </path> </g> </g></svg>
+                    <p class="tag">Javascript</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M23.834 8.101a13.912 13.912 0 0 1-13.643 11.72 10.105 10.105 0 0 1-1.994-.12 6.111 6.111 0 0 1-5.082-5.761 5.934 5.934 0 0 1 11.867-.084c.025.983-.401 1.846-1.277 1.871-.936 0-1.374-.668-1.374-1.567v-2.5a1.531 1.531 0 0 0-1.52-1.533H8.715a3.648 3.648 0 1 0 2.695 6.08l.073-.11.074.121a2.58 2.58 0 0 0 2.2 1.048 2.909 2.909 0 0 0 2.695-3.04 7.912 7.912 0 0 0-.217-1.933 7.404 7.404 0 0 0-14.64 1.603 7.497 7.497 0 0 0 7.308 7.405s.549.05 1.167.035a15.803 15.803 0 0 0 8.475-2.528c.036-.025.072.025.048.061a12.44 12.44 0 0 1-9.69 3.963 8.744 8.744 0 0 1-8.9-8.972 9.049 9.049 0 0 1 3.635-7.247 8.863 8.863 0 0 1 5.229-1.726h2.813a7.915 7.915 0 0 0 5.839-2.578.11.11 0 0 1 .059-.034.112.112 0 0 1 .12.053.113.113 0 0 1 .015.067 7.934 7.934 0 0 1-1.227 3.549.107.107 0 0 0-.014.06.11.11 0 0 0 .073.095.109.109 0 0 0 .062.004 8.505 8.505 0 0 0 5.913-4.876.155.155 0 0 1 .055-.053.15.15 0 0 1 .147 0 .153.153 0 0 1 .054.053A10.779 10.779 0 0 1 23.834 8.1zM8.895 11.628a2.188 2.188 0 1 0 2.188 2.188v-2.042a.158.158 0 0 0-.15-.15z"></path></g></svg>
+                    <p class="tag">Blazor</p>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01" alt="">
+            <div id="caption"></div>
+            </div>
+            <div class="featured-images">
+                <img src="./static/images/Snake_about.png" alt="Real-time Snake Multiplayer Gameplay">
+                <img src="./static/images/Snake_client.png" alt="MVC Design Pattern Structure">
+            </div>
+        </section>
+
+        <section class="problem-statement">
+            <h2 id="overview">/PROJECT OVERVIEW</h2>
+            <div>
+                <h3>Purpose</h3>
+                <p>To demonstrate skill in client networking through the creation of a client for a snake game, capable of real-time world rendering and state management given a server that sends object information over JSON.</p>
+            </div>
+
+            <div>
+                <h3>My Role</h3>
+                <p>Collaborated as a developer to implement the networking and rendering logic, while ensuring smooth gameplay.</p>
+                <ul>
+                    <li>Implement the Model-View-Controller (MVC) pattern to separate game state from UI</li>
+                    <li>Develop the NetworkController to handle socket connections and the multi-stage handshake protocol</li>
+                    <li>Deserialize JSON updates into custom objects for snakes, powerups, walls, and the world, to be drawn and displayed</li>
+                    <li>Design a visually appealing UI with a customized game theme, in addition to a homepage describing the project</li>
+                    <li>Use MySQL to construct databases that will track and display data</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="technical-section">
+            <h2 id="implementation">/TECHNICAL IMPLEMENTATION</h2>
+            
+            <h3>Architecture (MVC)</h3>
+            <p>Our application adheres strictly to the MVC pattern. The Models folder contains the core data structures (Snake, Powerups, Walls, World). The Controller layer is centered around a custom <code>NetworkController</code> that manages the TCP socket and asynchronous message processing. The View layer, built with Blazor Pages, listens for model updates and renders the world on the HTML5 Canvas.</p>
+
+            <h3>Networking & Handshake</h3>
+            <p>The client initiates a connection via a specific address and port, executing a formal handshake: sending the player name, receiving a unique ID, obtaining the world dimensions, and finally streaming live game objects. This process ensures the client and server are perfectly synchronized before the first frame is drawn.</p>
+            
+            <h3>State Management</h3>
+            <p>A key architectural decision was making the client "reactive." The client does not decide when a snake grows or dies; instead, it consumes state updates from the server and accurately re-draws the model. This prevents desync issues and ensures that the server remains the single source of truth for game logic.</p>
+
+            <h3>Features</h3>
+            
+            <div class="feature">
+                <div>
+<svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#8a2387"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#8a2387;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style> <path d="M22,20c-1.2,0-2.3,0.3-3.3,1H17v-3.1c4.5-0.5,8-4.3,8-8.9c0-5-4-9-9-9S7,4,7,9c0,4.6,3.5,8.4,8,8.9V21h-1.7 c-1-0.7-2.1-1-3.3-1c-3.3,0-6,2.7-6,6s2.7,6,6,6c1.2,0,2.3-0.3,3.3-1h5.4c1,0.7,2.1,1,3.3,1c3.3,0,6-2.7,6-6S25.3,20,22,20z M12,27 h-1v1c0,0.6-0.4,1-1,1s-1-0.4-1-1v-1H8c-0.6,0-1-0.4-1-1s0.4-1,1-1h1v-1c0-0.6,0.4-1,1-1s1,0.4,1,1v1h1c0.6,0,1,0.4,1,1 S12.6,27,12,27z M22.9,8h-2.3c-0.1-2-0.5-3.7-1.1-5C21.3,4,22.6,5.9,22.9,8z M20.7,10h2.3c-0.3,2.1-1.6,4-3.4,5 C20.2,13.7,20.6,12,20.7,10z M16,2c1,0,2.4,2.3,2.7,6h-5.3C13.6,4.3,15,2,16,2z M9.1,10h2.3c0.1,2,0.5,3.7,1.1,5 C10.7,14,9.4,12.1,9.1,10z M11.3,8H9.1c0.3-2.1,1.6-4,3.4-5C11.8,4.3,11.4,6,11.3,8z M16,16c-1,0-2.4-2.3-2.7-6h5.3 C18.4,13.7,17,16,16,16z M21.9,27.4c0,0.1-0.1,0.2-0.2,0.3c-0.1,0.1-0.2,0.2-0.3,0.2S21.1,28,21,28c-0.3,0-0.5-0.1-0.7-0.3 c-0.1-0.1-0.2-0.2-0.2-0.3c0-0.1-0.1-0.3-0.1-0.4s0-0.3,0.1-0.4c0-0.1,0.1-0.2,0.2-0.3c0.1-0.1,0.2-0.2,0.3-0.2 c0.4-0.2,0.8-0.1,1.1,0.2c0.1,0.1,0.2,0.2,0.2,0.3c0,0.1,0.1,0.3,0.1,0.4S22,27.3,21.9,27.4z M23.7,25.7C23.5,25.9,23.3,26,23,26 c-0.1,0-0.3,0-0.4-0.1s-0.2-0.1-0.3-0.2C22.1,25.5,22,25.3,22,25c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.2,0.2-0.3 c0.1-0.1,0.2-0.2,0.3-0.2c0.2-0.1,0.5-0.1,0.8,0c0.1,0,0.2,0.1,0.3,0.2c0.1,0.1,0.2,0.2,0.2,0.3c0,0.1,0.1,0.3,0.1,0.4 C24,25.3,23.9,25.5,23.7,25.7z"></path> </g></svg>                    <h3>Local Multiplayer</h3>
+                </div>
+                <p>Support for multiple snake players on the same machine, with distinguishing snake body colors, scores, and ids.</p>
+            </div>
+            
+            <div class="feature">
+                <div>
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#8a2387" d="M32,0C14.328,0,0,14.328,0,32s14.328,32,32,32s32-14.328,32-32S49.672,0,32,0z M52.812,20.078 c-2.293,1.973-4.105,3.762-7.457,3.887c-2.562,0.094-4.445,0.105-6.359-1.598c-2.727-2.477-0.859-5.777-0.758-9.504 C38.273,11.43,38.512,10.18,38.824,9C44.789,10.766,49.773,14.789,52.812,20.078z M9.867,41.289c2.09-2.031,5.508-3.109,7.949-5.816 c2.492-2.785,2.41-7.836,6.129-7.375c3.039,0.422,2.5,4.23,4.906,6.125c2.836,2.266,6.328,0.824,8.59,3.676 c2.969,3.77,2.277,8.066,0,12.293c-1.676,3.055-3.836,4.137-6.723,5.742C21.316,55.438,13.34,49.555,9.867,41.289z"></path> </g></svg>                    <h3>Real-time World Updates</h3>
+                </div>
+                <p>World and player states are batch-drawn, allowing for smooth rendering during chaotic multiplayer sessions. Game views are translated to follow players and stay within the world walls.</p>
+            </div>
+            
+            <div class="feature">
+                <div>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Environment / Cupcake"> <path id="Vector" d="M19 14L18.1963 19.6263C18.1267 20.1134 18.0917 20.3573 17.9741 20.5405C17.8705 20.7019 17.7228 20.8299 17.5483 20.9097C17.3506 21 17.1051 21 16.6147 21H14M19 14H14M19 14C20.3031 13.3956 21 11.7637 21 10.3335C21 8.79807 19.9706 7.48314 18.5098 6.93701C18.197 6.8201 18 6.51809 18 6.2085C18 4.94284 16.8807 3.9165 15.5 3.9165C15.2737 3.9165 15.0546 3.94406 14.8462 3.99571C14.414 4.1028 13.9305 4.0791 13.5586 3.85059C12.6841 3.31321 11.6319 3 10.5 3C7.46243 3 5 5.25723 5 8.04167C5 8.39362 4.77089 8.71567 4.44287 8.8986C3.57772 9.38108 3 10.254 3 11.2502C3 12.5275 3.71228 13.6908 5 14M5 14L5.80375 19.6263L5.80387 19.6276C5.87335 20.1139 5.90813 20.3574 6.02562 20.5405C6.12922 20.7019 6.27719 20.8299 6.45166 20.9097C6.64932 21 6.89485 21 7.38528 21H10M5 14H10M10 14H14M10 14V21M14 14V21M14 21H10" stroke="#8a2387" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>                    <h3>"Exploding" Animations</h3>
+                </div>
+                <p>As an extra visual feature, snake powerups (cupcakes) were given a custom "exploding" animation that triggers when a powerup is consumed.</p>
+            </div>
+            
+            <div class="feature">
+                <div>
+<svg fill="#8a2387" height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#8a2387"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M445.217,378.435c-138.295,0-232.811,0-378.435,0C29.9,378.435,0,408.334,0,445.217C0,482.1,29.9,512,66.783,512h378.435 C482.1,512,512,482.1,512,445.217C512,408.334,482.1,378.435,445.217,378.435z M103.25,478.609 c6.915-19.391,25.275-33.391,47.01-33.391c21.736,0,40.095,14,47.01,33.391H103.25z M361.739,445.217 c-21.737,0-40.095-14.111-47.01-33.503c51.676,0,45.34,0,94.022,0C401.834,431.106,383.476,445.217,361.739,445.217z"></path> </g> </g> <g> <g> <path d="M395.13,211.478H116.87c-36.883,0-66.783,29.9-66.783,66.783s29.9,66.783,66.783,66.783H395.13 c36.883,0,66.783-29.9,66.783-66.783S432.013,211.478,395.13,211.478z M183.652,278.261c-21.735,0-40.095-14-47.01-33.391 c48.681,0,42.345,0,94.021,0C223.747,264.261,205.388,278.261,183.652,278.261z"></path> </g> </g> <g> <g> <path d="M294.957,0c-28.25,0-50.612,0-80.679,0c-31.497,0-59.47,20.931-67.335,50.087h-28.725l-28.501-28.5 c-6.521-6.521-17.087-6.521-23.609,0c-6.521,6.516-6.521,17.092,0,23.609l21.588,21.586L66.109,88.37 c-6.522,6.516-6.522,17.092,0,23.608c6.522,6.522,17.086,6.522,23.609,0l28.499-28.5h28.65 c7.421,28.791,33.503,50.087,64.611,50.087h33.391v44.522h133.565V83.478C378.435,37.374,341.06,0,294.957,0z M278.261,66.783 c-9.22,0-16.696-7.475-16.696-16.696s7.475-16.696,16.696-16.696s16.696,7.475,16.696,16.696S287.481,66.783,278.261,66.783z M345.043,144.696h-30.315c5.043-14.143,16.17-25.271,30.315-30.315V144.696z"></path> </g> </g> </g></svg>                    <h3>Snake State Tracking</h3>
+                </div>
+                <p>Uses a database to keep track of player names, join/leave times, scores, max scores, and ids which are queried when necessary.</p>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-tabs">
+                    <button id="results-button">Results & Learnings</button>
+                    <button id="improvements-button">Future Improvements</button>
+            </div>
+            <div id="results">
+                <p>This project successfully demonstrated our ability to handle high-frequency networking in a C# environment.
+                <ul>
+                    <li>Mastered TCP Socket programming and asynchronous networking in .NET</li>
+                    <li>Gained experience in object-oriented design using the MVC pattern to represent and use World, Snake, Wall, and Powerup objects</li>
+                    <li>Practiced efficient database querying skills through batch queries instead of querying on each re-render</li>
+                </ul>
+            </div>
+
+            <div id="improvements">
+                <p>If we continue development on this client, some features we could add are:</p>
+                <ul>
+                    <li>Full multiplayer support for players in any location</li>
+                    <li>Customizable snake skins and trail effects</li>
+                    <li>Game stats and badges to reward players with</li>
+                </ul>
+            </div>
+        </section>
+
+    <footer>
+    <section id="contact-section">
+        <div class="light-orange_five circle"></div>
+
+        <div>
+            <h2 class="contact_one">LET'S BUILD</h2>
+            <h2 class="contact_two">SOMETHING</h2>
+            <h2 class="contact_three">AMAZING.</h2>
+        </div>
+        <P>CONTACT ME AT:</P>
+        <ul>
+            <li><a href="mailto:Kalinathi86@gmail.com">KALINATHI86@GMAIL.COM</a></li>
+            <li><a href="tel:+13856303411">(385) 630-3411</a></li>
+            <LI><a href="https://www.linkedin.com/in/kalina-tran-92650a261/" target="_blank">LINKEDIN LINK</a></LI>
+            <LI><a href="https://github.com/Kwinoa?tab=overview&from=2025-10-01&to=2025-10-12" target="_blank">GITHUB
+                    LINK</a></LI>
+        </ul>
+    </section>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Get all images and insert the clicked image inside the modal
+    // Get the content of the image description and insert it inside the modal image caption
+    var images = document.getElementsByTagName('img');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    var i;
+    for (i = 0; i < images.length; i++) {
+        images[i].onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+        }
+    }
+
+    var resultsButton = document.getElementById('results-button');
+    var improvementsButton = document.getElementById('improvements-button');
+
+    var results = document.getElementById('results');
+    var improvements = document.getElementById('improvements');
+
+    resultsButton.classList.add("active-button");
+    improvementsButton.classList.add("inactive-button");
+    improvements.style.display = "none";
+
+    resultsButton.addEventListener("click", function () {
+        resultsButton.classList.add("active-button");
+        resultsButton.classList.remove("inactive-button");
+        improvementsButton.classList.remove("active-button");
+        results.style.display = "inline";
+        improvements.style.display = "none";
+    })
+
+    improvementsButton.addEventListener("click", function () {
+        resultsButton.classList.remove("active-button");
+        improvementsButton.classList.add("active-button");
+        resultsButton.classList.add("inactive-button");
+        improvements.style.display = "inline";
+        results.style.display = "none";
+    })
+</script>

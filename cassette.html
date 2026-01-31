@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassette Inventory System - Kalina Tran's Portfolio</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="icon" type="image/png" href="./static/images/web-miscellaneous-svgrepo-com.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#implementation">Implementation</a></li>
+                <li><a href="#impact">Results</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <h1>/CASSETTE_INVENTORY_SYSTEM</h1>
+            <div class="tech-tags">
+                <div>
+                    <svg fill="#f27121" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/></svg>
+                    <p class="tag">Spring Boot</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg>
+                    <p class="tag">React 19</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16.5C21 16.88 20.79 17.21 20.47 17.38L12.57 21.82C12.41 21.94 12.21 22 12 22C11.79 22 11.59 21.94 11.43 21.82L3.53 17.38C3.21 17.21 3 16.88 3 16.5V7.5C3 7.12 3.21 6.79 3.53 6.62L11.43 2.18C11.59 2.06 11.79 2 12 2C12.21 2 12.41 2.06 12.57 2.18L20.47 6.62C20.79 6.79 21 7.12 21 7.5V16.5Z"/></svg>
+                    <p class="tag">OpenAI</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 4.02 2 6.5s4.48 4.5 10 4.5 10-2.02 10-4.5S17.52 2 12 2zm0 18c-5.52 0-10-2.02-10-4.5V18c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-2.5c0 2.48-4.48 4.5-10 4.5z"/></svg>
+                    <p class="tag">MySQL</p>
+                </div>
+                <div>
+                    <svg fill="#f27121" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.3c-.22.36-.68.48-1.05.26-2.91-1.78-6.58-2.18-10.9-1.2-.41.09-.82-.17-.91-.58-.09-.41.17-.82.58-.91 4.71-1.07 8.76-.61 12.02 1.38.37.22.49.68.26 1.05zm1.46-3.26c-.28.45-.87.59-1.32.31-3.33-2.05-8.41-2.64-12.35-1.45-.51.16-1.04-.13-1.19-.64-.15-.51.13-1.04.64-1.19 4.51-1.37 10.12-.7 13.91 1.63.45.27.59.87.31 1.34zm.13-3.38C15.02 8.44 8.29 8.22 4.4 9.4c-.6.18-1.24-.16-1.42-.76-.18-.6.16-1.24.76-1.42 4.48-1.36 11.91-1.11 16.59 1.66.54.32.72 1.03.4 1.57-.32.54-1.03.72-1.57.4z"/></svg>
+                    <p class="tag">Spotify SDK</p>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01" alt="">
+            <div id="caption"></div>
+            </div>
+            <div class="featured-images">
+                <img src="./static/images/Cassette_Collection.png" alt="Cassette Inventory Collection View">
+                <img src="./static/images/Spotify_Player.png" alt="Vintage Cassette Themed Spotify Player">
+            </div>
+        </section>
+
+        <section class="problem-statement">
+            <h2 id="overview">/PROJECT OVERVIEW</h2>
+            <div>
+                <h3>Purpose</h3>
+                <p>To create a niche management platform for cassette tape collectors that bridges the gap between physical media and digital streaming. This project explores the integration of multiple third-party APIs (Discogs, Spotify, and OpenAI) within a modern full-stack architecture to provide a seamless cataloging and listening experience.</p>
+            </div>
+
+            <div>
+                <h3>My Role</h3>
+                <p>Full-Stack Developer responsible for the end-to-end design and implementation of the system.</p>
+                <ul>
+                    <li>Developed a RESTful Spring Boot backend with JPA/Hibernate for persistent storage.</li>
+                    <li>Built a dynamic, responsive React 19 frontend using Vite and CSS Modules.</li>
+                    <li>Integrated the Discogs API for automated album metadata and cover art retrieval.</li>
+                    <li>Implemented a "Smart Search" recommendation engine using the OpenAI API.</li>
+                    <li>Designed and coded a custom, vintage-themed Spotify web player using the Spotify Playback SDK.</li>
+                    <li>Configured secure session-based authentication and user-specific data isolation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="technical-section">
+            <h2 id="implementation">/TECHNICAL IMPLEMENTATION</h2>
+            
+            <h3>Architecture</h3>
+            <p>The system utilizes a decoupled architecture. The Spring Boot backend serves as a centralized API gateway and business logic layer, handling interactions with the MySQL database and external microservices. The React frontend consumes these endpoints, providing a smooth, single-page application (SPA) experience. Communication is facilitated via Axios with reactive data handling through React Context.</p>
+            
+            <h3>Key Technologies & Why</h3>
+            <p>Spring Boot 3 was selected for its robust ecosystem and efficient handling of external REST services via WebClient. React 19 was used on the frontend to leverage the latest performance improvements and component-based structure. MySQL provides a reliable relational structure for complex user-to-cassette relationships, while OpenAI was integrated to add a modern, intelligent layer to the traditional inventory search.</p>
+            
+            <h3>API Integration & Design</h3>
+            <p>One of the project's highlights is the "Smart Search" feature. The backend constructs prompts based on the user's existing collection and sends them to OpenAI, which returns intelligent recommendations. Simultaneously, the Discogs API is used to fetch high-quality metadata, ensuring the user's digital inventory matches their physical shelf accurately. The Spotify SDK integration requires complex OAuth flows, which I managed through a dedicated SpotifyService on the backend.</p>
+            
+            <h3>Challenges & Solutions</h3>
+            <p>A major challenge was synchronizing the Spotify Web Playback SDK with the React state. I solved this by implementing a global Player Context that monitors playback status (play/pause/track info) across the entire application. Another challenge was handling the hardcoded Discogs tokens and Spotify URIs; I transitioned sensitive configurations to environment variables and properties files to improve security and maintainability.</p>
+
+            <h3>Features</h3>
+            
+            <div class="feature">
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7H4V17H20V7Z" stroke="#8a2387" stroke-width="2"/><path d="M9 7V4H15V7" stroke="#8a2387" stroke-width="2"/></svg>
+                    <h3>AI-Powered Recommendations</h3>
+                </div>
+                <p>The "Smart Search" utilizes OpenAI to analyze your collection's genres and styles, suggesting new music that fits your specific taste profile.</p>
+            </div>
+            
+            <div class="feature">
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V5L21 3V16" stroke="#8a2387" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="18" r="3" stroke="#8a2387" stroke-width="2"/></svg>
+                    <h3>Vintage Spotify Player</h3>
+                </div>
+                <p>A custom-styled Spotify player that mimics a 1980s cassette deck. It allows full playback control of albums in your collection directly through the browser.</p>
+            </div>
+            
+            <div class="feature">
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8" stroke="#8a2387" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="#8a2387" stroke-width="2"/></svg>
+                    <h3>Discogs Cataloging</h3>
+                </div>
+                <p>Instant search and import functionality via Discogs, allowing users to add albums with full tracklists and official cover art in seconds.</p>
+            </div>
+            
+            <div class="feature">
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 18H12.01M7 21H17C18.1046 21 19 20.1046 19 19V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21Z" stroke="#8a2387" stroke-width="2" stroke-linecap="round"/></svg>
+                    <h3>Dynamic Inventory Management</h3>
+                </div>
+                <p>Real-time filtering and searching of your personal collection. Supports custom image uploads for rare or bootleg tapes not found in global databases.</p>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2 id="impact">/IMPACT</h2>
+            <h3>Results & Learnings</h3>
+            <p>The final application is a specialized tool that combines the nostalgia of physical collecting with modern AI and streaming technologies. This project significantly deepened my understanding of OAuth2 flows and the complexities of managing state in real-time media applications.</p>
+            <ul>
+                <li>Mastered multi-API orchestration, ensuring data consistency across Discogs, Spotify, and local storage.</li>
+                <li>Gained expertise in React 19’s new features and advanced Context API patterns for global state.</li>
+                <li>Improved backend security through Spring Security and session-based authentication.</li>
+            </ul>
+
+            <h3>Future Improvements</h3>
+            <p>To take this project further, I plan to implement:</p>
+            <ul>
+                <li>Social features to follow friends and view their "digital shelves."</li>
+                <li>Batch import functionality using Discogs collection exports.</li>
+                <li>Mobile-first optimization for barcode scanning to add tapes via camera.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+    <section id="contact-section">
+        <div class="light-orange_five circle"></div>
+
+        <div>
+            <h2 class="contact_one">LET'S BUILD</h2>
+            <h2 class="contact_two">SOMETHING</h2>
+            <h2 class="contact_three">AMAZING.</h2>
+        </div>
+        <P>CONTACT ME AT:</P>
+        <ul>
+            <li><a href="mailto:Kalinathi86@gmail.com">KALINATHI86@GMAIL.COM</a></li>
+            <li><a href="tel:+13856303411">(385) 630-3411</a></li>
+            <LI><a href="https://www.linkedin.com/in/kalina-tran-92650a261/" target="_blank">LINKEDIN LINK</a></LI>
+            <LI><a href="https://github.com/Kwinoa?tab=overview&from=2025-10-01&to=2025-10-12" target="_blank">GITHUB
+                    LINK</a></LI>
+        </ul>
+    </section>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Get all images and insert the clicked image inside the modal
+    // Get the content of the image description and insert it inside the modal image caption
+    var images = document.getElementsByTagName('img');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    var i;
+    for (i = 0; i < images.length; i++) {
+        images[i].onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+        }
+    }
+
+    var resultsButton = document.getElementById('results-button');
+    var improvementsButton = document.getElementById('improvements-button');
+
+    var results = document.getElementById('results');
+    var improvements = document.getElementById('improvements');
+
+    resultsButton.classList.add("active-button");
+    improvementsButton.classList.add("inactive-button");
+    improvements.style.display = "none";
+
+    resultsButton.addEventListener("click", function () {
+        resultsButton.classList.add("active-button");
+        resultsButton.classList.remove("inactive-button");
+        improvementsButton.classList.remove("active-button");
+        results.style.display = "inline";
+        improvements.style.display = "none";
+    })
+    
+    improvementsButton.addEventListener("click", function () {
+        resultsButton.classList.remove("active-button");
+        improvementsButton.classList.add("active-button");
+        resultsButton.classList.add("inactive-button");
+        improvements.style.display = "inline";
+        results.style.display = "none";
+    })
+</script>
